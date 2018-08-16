@@ -134,7 +134,7 @@
 			navTarget = thisTarget;
 			
 			// Switch the URL via History
-			History.pushState(null, docTitle, thisTarget);
+			History.pushState({state:1}, docTitle, thisTarget);
 		}
 
 	});
