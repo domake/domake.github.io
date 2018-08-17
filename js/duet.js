@@ -86,58 +86,58 @@
 
 	// On clicking a link
 
-	$(document).on('click', 'a', function (event){
+	// $(document).on('click', 'a', function (event){
 
-		// Don't follow link
-		event.preventDefault();
+	// 	// Don't follow link
+	// 	event.preventDefault();
 
-		// Get the link target
-		var thisTarget = $(this).attr('href');
+	// 	// Get the link target
+	// 	var thisTarget = $(this).attr('href');
 
-		// If link is external
-		if ( thisTarget.indexOf('http') >= 0 ) {
+	// 	// If link is external
+	// 	if ( thisTarget.indexOf('http') >= 0 ) {
 
-			// Go to the external link
-			window.open(thisTarget, '_blank');
+	// 		// Go to the external link
+	// 		window.open(thisTarget, '_blank');
 
-		}
+	// 	}
 
-		// If we don't want to use ajax
-		else if ( $(this).hasClass('js-no-ajax') ) {
+	// 	// If we don't want to use ajax
+	// 	else if ( $(this).hasClass('js-no-ajax') ) {
 
-			// Use the given link
-			window.location = thisTarget;
-		}
+	// 		// Use the given link
+	// 		window.location = thisTarget;
+	// 	}
 
-		// if it's a contact modal
-		else if ( $(this).hasClass('js-contact') ) {
+	// 	// if it's a contact modal
+	// 	else if ( $(this).hasClass('js-contact') ) {
 
-			// Open contact modal
-			$('.modal--contact').addClass('modal--on');
-		}
+	// 		// Open contact modal
+	// 		$('.modal--contact').addClass('modal--on');
+	// 	}
 
-		else if ( $(this).hasClass('js-signup') ) {
-			// Open signup modal
-			$('.modal--signup').addClass('modal--on');
-		}
+	// 	else if ( $(this).hasClass('js-signup') ) {
+	// 		// Open signup modal
+	// 		$('.modal--signup').addClass('modal--on');
+	// 	}
 
-		// If link is handled by some JS action – e.g. fluidbox
-		else if ( $(this).is('.gallery__item__link') ) {
+	// 	// If link is handled by some JS action – e.g. fluidbox
+	// 	else if ( $(this).is('.gallery__item__link') ) {
 			
-			// Let JS handle it
-		}
+	// 		// Let JS handle it
+	// 	}
 
-		// If link is internal
-		else {
+	// 	// If link is internal
+	// 	else {
 
-			// Change navTarget
-			navTarget = thisTarget;
+	// 		// Change navTarget
+	// 		navTarget = thisTarget;
 			
-			// Switch the URL via History
-			History.pushState({state:1}, docTitle, thisTarget);
-		}
+	// 		// Switch the URL via History
+	// 		History.pushState(null, docTitle, thisTarget);
+	// 	}
 
-	});
+	// });
 
 
 
